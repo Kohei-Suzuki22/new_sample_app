@@ -3,20 +3,9 @@ html
   head
     title
       = full_title(yield(:title))
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    = render "layouts/shim"
-    / ![if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
-      </script>
-    / <![endif]
-    = render "layouts/bootstrap_js"
-
-
-
+    = render "layouts/head"
   body
     = render "layouts/header"
     .container
       = yield
+      = render "layouts/footer"
