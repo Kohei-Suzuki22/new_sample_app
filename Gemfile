@@ -60,6 +60,7 @@ gem 'slim-rails'
 gem 'html2slim'
 gem 'jquery-rails'
 gem 'bootstrap'
+gem 'rails-controller-testing'
 # gem 'bootstrap-sass'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
