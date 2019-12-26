@@ -2,11 +2,13 @@ doctype html
 html
   head
     title
-      = yield(:title)
-      |  | Ruby on Rails Tutorial Sample App
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+      = full_title(yield(:title))
+    = render "layouts/head"
   body
-    = yield
+    = render "layouts/header"
+    .container
+      - flash.each do |type,message|
+        = content_tag(:div, message, class: "alert alert-#{type}")
+      = yield
+      = render "layouts/footer"
+      = debug(params) if Rails.env.development?

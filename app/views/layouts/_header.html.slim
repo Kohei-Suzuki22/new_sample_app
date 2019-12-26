@@ -1,0 +1,9 @@
+header.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  = link_to "Sample App", root_path, id: "logo"
+  button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navbar" aria-controls="Navber" aria-expanded="false"
+    span.navbar-toggler-icon
+  .collapse.navbar-collapse#Navbar
+    ul.navbar-nav.ml-auto
+      li.nav-item.active = link_to "Home", root_path
+      li.nav-item = link_to "Help", help_path
+      li.nav-item = link_to "Log in", "#"
